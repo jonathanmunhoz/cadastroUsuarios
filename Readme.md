@@ -72,9 +72,23 @@ ________________________________________________________________________________
 E para execução do comando no SQL com Python, feito a execução da classe alterar_dados, e um commit das informações enviadas.
 
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/SsBmKM9L/img12.png" alt="img12"/></a><br/><br/>
+_______________________________________________________________________________________________________________________________
+A partir desta etapa, foi colocado um laço de repetição, para um tipo de "menu" no final.
 
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/y846fMfY/img13.png" alt="img13"/></a><br/><br/>
+_______________________________________________________________________________________________________________________________
+Nesta opção, se o usuário digiitar "1", ele poderá alterar sua senha em nosso banco de dados. Foi utilizado o comando Update.
+
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/fRcz18F7/img14.png" alt="img14"/></a><br/><br/>
+_______________________________________________________________________________________________________________________________
+Na opção "2" ele conseguirá deletar seu cadastro de nosso banco de dados, utilizando o comando do SQL Delete.
+
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/pdk2LpPp/img15.png" alt="img15"/></a><br/><br/>
+_______________________________________________________________________________________________________________________________
+Opção "3" é possível que o usuário recupere sua senha, caso a tenha esquecido, usando o comando Select em nosso banco.
+
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/4ddX7s3w/img16.png" alt="img16"/></a><br/><br/>
+_______________________________________________________________________________________________________________________________
+Opção "4" simplesmente finaliza o programa.
+
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/q7pJr8VP/img17.png" alt="img17"/></a><br/><br/>
