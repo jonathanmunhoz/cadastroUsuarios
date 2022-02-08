@@ -6,16 +6,21 @@ No banco de dados, toda senha cadastrada é salva de acordo com o e-mail que foi
 _______________________________________________________________________________________________________________________________
 Tecnologias utilizadas:
 Python - Linguagem de Programação
+
 MySQL Server - Banco de dados
+
 Mysql.connector - Biblioteca para integração do Banco de Dados
+
 Csv - Biblioteca para importar um arquivo CSV
+
 Smtplib - Biblioteca para importar um endereço de e-mail
+
 Email.message - Biblioteca para integrar um endereço de e-mail
 _______________________________________________________________________________________________________________________________
 Requisitos:
 Ter instalado uma versão recente do Python (Durante o desenvolvimento foi utilizado a versão PyCharm 2021 3.2)
 
-Criar um arquivo CSV no endereço padrão de projetos Python, com um arquivo CSV que contenha as informações: nome, sobrenome, e email.
+Criar um arquivo CSV no endereço padrão de projetos Python, com um arquivo CSV que contenha as informações: nome, sobrenome e email.
 
 Criar um banco de dados com as informações necessárias, ou utilizar o IP de um computador que esteja configurado corretamente.
 _______________________________________________________________________________________________________________________________
@@ -54,7 +59,7 @@ E uma mensagem de alerta para o usuário.
 _______________________________________________________________________________________________________________________________
 Nesta parte, é utilizado o While para fazer uma validação de senha, para garantir que o usuário não irá conseguir entrar utilizando qualquer senha.
 
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/NGXgzdhd/img9.png" alt="img9"/></a><br/><br/>
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/dQfVCkrC/img9.png" alt="img9"/></a><br/><br/>
 _______________________________________________________________________________________________________________________________
 Para finalizar, o usuário deve inserir sua nova senha, que será enviada para nossa base de dados. E o email, será utilizado para destinar para qual ID no banco será enviado a atualização da senha.
 
@@ -62,8 +67,14 @@ Para finalizar, o usuário deve inserir sua nova senha, que será enviada para n
 _______________________________________________________________________________________________________________________________
 Comando que realiza a atualização da senha, dependendo do email que for usado:
 
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/DZJ2FgSy/img11.png" alt="img11"/></a><br/><br/>
+<a href='https://postimg.cc/xkYxm0v5' target='_blank'><img src='https://i.postimg.cc/BvPddbtr/img11.png' border='0' alt='img11'/></a>
 _______________________________________________________________________________________________________________________________
 E para execução do comando no SQL com Python, feito a execução da classe alterar_dados, e um commit das informações enviadas.
 
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/SsBmKM9L/img12.png" alt="img12"/></a><br/><br/>
+
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/y846fMfY/img13.png" alt="img13"/></a><br/><br/>
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/fRcz18F7/img14.png" alt="img14"/></a><br/><br/>
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/pdk2LpPp/img15.png" alt="img15"/></a><br/><br/>
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/4ddX7s3w/img16.png" alt="img16"/></a><br/><br/>
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/q7pJr8VP/img17.png" alt="img17"/></a><br/><br/>
