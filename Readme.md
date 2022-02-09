@@ -89,6 +89,4 @@ Opção "3" é possível que o usuário recupere sua senha, caso a tenha esqueci
 
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/Rh4PM0sP/img16.png" alt="img16"/></a><br/><br/>
 _______________________________________________________________________________________________________________________________
-Opção "4" simplesmente finaliza o programa.
-
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/9fwgbKwB/img17.png" alt="img17"/></a><br/><br/>
+E assim, encerramos o nosso programa!
