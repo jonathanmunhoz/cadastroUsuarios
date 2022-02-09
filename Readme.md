@@ -81,12 +81,12 @@ Nesta opção, se o usuário digiitar "1", ele poderá alterar sua senha em noss
 
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/mDQXf9wz/img14.png" alt="img14"/></a><br/><br/>
 _______________________________________________________________________________________________________________________________
-Na opção "2" ele conseguirá deletar seu cadastro de nosso banco de dados, utilizando o comando do SQL Delete.
-
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/76vsW9gr/img15.png" alt="img15"/></a><br/><br/>
-_______________________________________________________________________________________________________________________________
-Opção "3" é possível que o usuário recupere sua senha, caso a tenha esquecido, usando o comando Select em nosso banco.
+na opção "2" é possível que o usuário recupere sua senha, caso a tenha esquecido, usando o comando Select em nosso banco.
 
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/Rh4PM0sP/img16.png" alt="img16"/></a><br/><br/>
+_______________________________________________________________________________________________________________________________
+Opção "3" ele conseguirá deletar seu cadastro de nosso banco de dados, utilizando o comando do SQL Delete.
+
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/76vsW9gr/img15.png" alt="img15"/></a><br/><br/>
 _______________________________________________________________________________________________________________________________
 E assim, encerramos o nosso programa!
