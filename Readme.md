@@ -24,6 +24,10 @@ Criar um arquivo CSV no endereço padrão de projetos Python, com um arquivo CSV
 
 Criar um banco de dados com as informações necessárias, ou utilizar o IP de um computador que esteja configurado corretamente.
 _______________________________________________________________________________________________________________________________
+Database - Tabela Banco de Dados
+
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/FsHBhCzg/bd1.png" alt="bd1"/></a><br/><br/>
+_______________________________________________________________________________________________________________________________
 Desenvolvimento do Projeto:
 De início, é utilizado uma varíavel para realizar a conexão com o banco de dados, onde todos os dados sobre o Database e a Tabela estão inseridos.
 
