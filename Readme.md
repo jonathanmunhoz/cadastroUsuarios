@@ -31,7 +31,7 @@ De início, é utilizado uma varíavel para realizar a conexão com o banco de d
 _______________________________________________________________________________________________________________________________
 Em seguida, começamos deixando um script para o usuário identificar se a conexão com o banco de dados foi bem-sucedida.
 
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/KvXYGdrX/img2.png" alt="img2"/></a><br/><br/>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/VvKSHYJr/img2.png' border='0' alt='img2'/></a>
 _______________________________________________________________________________________________________________________________
 Após a integração e validação com o Banco de Dados, vamos fazer a leitura do arquivo CSV.
 
