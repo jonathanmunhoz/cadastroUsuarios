@@ -26,7 +26,7 @@ Criar um banco de dados com as informações necessárias, ou utilizar o IP de u
 _______________________________________________________________________________________________________________________________
 Database - Tabela Banco de Dados
 
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/FsHBhCzg/bd1.png" alt="bd1"/></a><br/><br/>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/cJyFhrP1/bd1.png' border='0' alt='bd1'/></a>
 _______________________________________________________________________________________________________________________________
 Desenvolvimento do Projeto:
 De início, é utilizado uma varíavel para realizar a conexão com o banco de dados, onde todos os dados sobre o Database e a Tabela estão inseridos.
