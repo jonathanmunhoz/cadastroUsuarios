@@ -1,19 +1,15 @@
 import mysql.connector
 
-dados_conexao = (
-    "Driver={SQL Server};"
-    "Server=localhost;"
-    "Database=db_usuario;"
-)
-
 con = mysql.connector.connect(host='localhost',database='db_usuario',user='root',password='root')
 if con.is_connected():
     db_info = con.get_server_info()
     print("Conectado ao servidor MySQL versão ",db_info)
     cursor = con.cursor()
+    cursor = con.cursor(buffered=True)
     cursor.execute("select database();")
     linha = cursor.fetchone()
     print("Conectado ao banco de dados ",linha)
+    print("_______________________________________________________")
 
 import csv
 
@@ -22,8 +18,13 @@ with open('dadosUsuarios.csv', 'r') as arquivo:
     for linha in arquivo_csv:
         print(linha)
 
-usuario = input('Digite seu usuário: ')
+print("_______________________________________________________")
 
+nome = input("Digite seu primeiro nome: ")
+sobrenome = input("Digite seu sobrenome: ")
+print("_______________________________________________________")
+
+usuario = input('Digite seu usuário: ')
 chave = input('Digite a base da sua senha: ')
 
 senha = ""
@@ -52,18 +53,28 @@ for letra in chave:
     elif letra in "Yy": senha = senha + "y"
     elif letra in "Zz": senha = senha + "24"
 
+    elif letra in "1": senha = senha + "i"
+    elif letra in "2": senha = senha + "II"
+    elif letra in "3": senha = senha + "III"
+    elif letra in "4": senha = senha + "04"
+    elif letra in "5": senha = senha + "05"
+    elif letra in "6": senha = senha + "06"
+
     elif letra in "Rr": senha = senha + "#"
     elif letra in "Ss": senha = senha + "%"
     elif letra in "Mm": senha = senha + "$"
     else: senha = senha + letra
+
+print('_______________________________________________________')
 print('Seu usuário é: ', usuario)
 print('Sua senha é: ', senha)
+print('_______________________________________________________')
 
 import smtplib
 import email.message
 
 def enviar_email():
-    corpo_email = '<p>Usuário: ' + usuario + '</p> <p>Senha: ' + senha + '</p>'
+    corpo_email = 'Nome: ' + nome + '<br>Usuario: ' + usuario + '<br>Senha: ' + senha
 
     msg = email.message.Message()
     msg['Subject'] = "Teste"
@@ -81,18 +92,69 @@ def enviar_email():
     print('Email enviado')
 enviar_email()
 
+print('_______________________________________________________')
 print('Realize seu Login!')
 
 login = input('Login: ')
+while login not in usuario:
+    login = input('Dados inválidos. Por favor, informe seu usuario: ')
 senhaLogin = input('Senha: ')
 while senhaLogin not in senha:
     senhaLogin = input('Dados inválidos. Por favor, informe sua senha: ')
 print('Dados corretos! Por favor, cadastre uma nova senha em seu primeiro login!'.format(senhaLogin))
 
-novaSenha = input('Nova senha: ')
-email = input("Digite seu E-mail: ")
+print("_______________________________________________________")
 
-alterar_dados = "UPDATE tb_usuario SET senha = '" + novaSenha + "' WHERE email = '" + email + "';";
+novaSenha = input('Nova senha: ')
+email = input("Confirme seu E-mail: ")
+
+#alterar_dados = "UPDATE tb_usuario SET senha = '" + novaSenha + "' WHERE email = '" + email + "';";
+alterar_dados = "INSERT INTO tb_usuario (nome, sobrenome, usuario, email, codigo, senha) VALUES ('" + nome + "', '" + sobrenome + "','" + usuario + "','" + email + "', '" + senha + "', '" + novaSenha + "')";
 
 cursor.execute(alterar_dados)
 con.commit()
+
+opcao = "0"
+
+while opcao !="4":
+    print("Opções para continuar:")
+    print("1) Alterar senha")
+    print("2) Esqueci minha senha")
+    print("3) Deletar usuario")
+
+    opcoes = input("Insira o número da opção desejada: ")
+
+    for numero in opcoes:
+        if numero in "1":
+            novaSenha = input("Alterar senha: ")
+
+            emailConfirma = input("Confirme seu email: ")
+            while emailConfirma not in email:
+                emailConfirma = input('Dados inválidos. Por favor, informe seu email: ')
+
+            alterar_dados_senha = "UPDATE tb_usuario SET senha = '" + novaSenha + "' WHERE email = '" + email + "';";
+            cursor.execute(alterar_dados_senha)
+            con.commit()
+            print("Senha alterada!")
+            print("_______________________________________________________")
+
+        elif numero in "2":
+            lembrarSenha = input("Confirme seu email para receber a senha: ")
+            while lembrarSenha not in email:
+                lembrarSenha = input('Dados inválidos. Por favor, informe seu email: ')
+
+            lembrar_senha = "SELECT senha FROM tb_usuario WHERE email = '" + email + "';";
+            cursor.execute(lembrar_senha)
+            print("Sua senha: ", novaSenha)
+            print("_______________________________________________________")
+
+        elif numero in "3":
+            deletaUsuario = input("Confirme seu email para deletar: ")
+            while deletaUsuario not in email:
+                deletaUsuario = input('Dados inválidos. Por favor, informe seu email: ')
+
+            deleta_usuario = "DELETE FROM tb_usuario WHERE email = '" + email + "';";
+            cursor.execute(deleta_usuario)
+            con.commit()
+            print("Usuario deletado!")
+            print("_______________________________________________________")
